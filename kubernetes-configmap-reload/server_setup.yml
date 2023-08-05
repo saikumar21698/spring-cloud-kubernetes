@@ -18,7 +18,7 @@
       apache2_module: name=proxy_http state=present
     
     - name: enabled ssl
-      apache2_module: name=ssl state=present
+      apache2_mod: name=ssl state=present
     
     - name: enabled socache_shmcb
       apache2_module: name=socache_shmcb state=present
