@@ -9,7 +9,7 @@
       yum: name=httpd state=latest
 
     - name: enabled mod_rewrite
-      apache2_module: name=rewrite state=present httpd=yes
+      apache2_module: name=rewrite state=present
 
     - name: enabled proxy
       apache2_module: name=proxy state=present
