@@ -6,10 +6,10 @@
       yum: update_cache=yes   
    
     - name: install apache2
-      yum: name=apache2 state=latest
+      yum: name=httpd state=latest
 
     - name: enabled mod_rewrite
-      apache2_module: name=rewrite state=present
+      apache2_module: name=rewrite state=present httpd=yes
 
     - name: enabled proxy
       apache2_module: name=proxy state=present
