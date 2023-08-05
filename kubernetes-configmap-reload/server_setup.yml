@@ -23,8 +23,8 @@
     - name: enabled socache_shmcb
       apache2_module: name=socache_shmcb state=present
 
-    - name: enabled mpm_event
-      apache2_module: name=mpm_event state=present
+    # - name: enabled mpm_event
+    #   apache2_module: name=mpm_event state=present
 
 
       notify:
