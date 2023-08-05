@@ -68,6 +68,9 @@ pipeline {
 			}
 	        steps {
 	            sh 'echo ${WORKSPACE}'
+		    sh 'echo $KUBECONFIG'  // Print KUBECONFIG value for debugging
+       	            sh 'kubectl version'   // Check kubectl version and configuration
+       		    sh 'kubectl config current-context'  // Verify the current Kubernetes context
 	            sh 'kubectl create -f ${WORKSPACE}/kubernetes-configmap-reload/kubernetes-configmap.yml'
 	        }
 	    }
